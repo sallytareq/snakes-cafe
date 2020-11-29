@@ -12,6 +12,7 @@ I  have created an application that will show the user a menu, then prompt them 
 
 * Python
 
-## Live Links
+## Links
 
+[Pull Request](https://github.com/sallytareq/snakes-cafe/pull/1)
 [GitHub Pages](https://sallytareq.github.io/snakes-cafe/)
