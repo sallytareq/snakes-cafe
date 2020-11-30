@@ -17,63 +17,62 @@ food = [
 ]
 
 def menu():
-    print(
-        """
-        **************************************
-        **    Welcome to the Snakes Cafe!   **
-        **    Please see our menu below.    **
-        ** To quit at any time, type "quit" **
-        **************************************
+    print("""
+**************************************
+**    Welcome to the Snakes Cafe!   **
+**    Please see our menu below.    **
+** To quit at any time, type "quit" **
+**************************************
 
-        Appetizers
-        ----------
-        Wings
-        Cookies
-        Spring Rolls
+Appetizers
+----------
+Wings
+Cookies
+Spring Rolls
 
-        Entrees
-        -------
-        Salmon
-        Steak
-        Meat Tornado
-        A Literal Garden
+Entrees
+-------
+Salmon
+Steak
+Meat Tornado
+A Literal Garden
 
-        Desserts
-        --------
-        Ice Cream
-        Cake
-        Pie
+Desserts
+--------
+Ice Cream
+Cake
+Pie
 
-        Drinks
-        ------
-        Coffee
-        Tea
-        Unicorn Tears
+Drinks
+------
+Coffee
+Tea
+Unicorn Tears
 
-        ***********************************
-        ** What would you like to order? **
-        ***********************************
-        """
-    )
+***********************************
+** What would you like to order? **
+***********************************""")
 
 def order():
-    item = input("        > ").lower().capitalize()
+    item = input("\n> ").lower().capitalize()
     for x in food:
         # if item in x.values():
             if (item == x["name"]):
                     x["count"] = x["count"] + 1
-                    print("\n        ** %d order of %s have been added to your meal **" % (x["count"] , x["name"]))
+                    print("\n** %d order of %s have been added to your meal **" % (x["count"] , x["name"]))
                     break
     else:
-        print(f"        Sorry! {item.lower()} is not on the menu")
+        print(f"Sorry! {item.lower()} is not on the menu")
     
 def total():
-    print("\n        Your order summary: \n")    
+
+    print("\n*******************")
+    print("Your order summary: \n")    
     for x in food:
         if (x["count"] > 0):
-            print("        Item: %s \t Quantity: %d" % (x["name"] , x["count"]))           
+            print("Item: %s \t Quantity: %d" % (x["name"] , x["count"]))           
     
-    print("\n        Thanks for ordering, enjoy your meal! \n\n")    
+    print("\nThank you for ordering, enjoy your meal! \n\n")    
 
 
 if __name__ == "__main__": 
@@ -81,16 +80,13 @@ if __name__ == "__main__":
     order()
     cont = 'y'
     while cont != 'quit':
-        user_input = input("""
-        Would you like to order another item?
-        Enter any key to continue, or "quit" to exit.
-        > """).lower()
+        user_input = input("""\nWould you like to order another item? \nEnter any key to continue, or "quit" to exit. \n\n> """).lower()
         cont = user_input
         if cont == 'quit':
             total()
             break
         cont = ''
-        print("        What would you like to add to your order?")
+        print("\nWhat would you like to add to your order?")
         order()
         
     
